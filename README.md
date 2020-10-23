@@ -1,53 +1,5 @@
-# Spring Cloud Example Project
+# Spring Cloud Project
 
-An example project that demonstrates an end-to-end cloud-native platform using Spring Cloud for building a practical microservices architecture.
+The project is to upgrade its existing booking engine, transitioning from monolithic to microservices architecture. Room booking module is one of our reservation microservices which checks room availability and status, show free rooms across different channels. The goal is to provide its customers with highly available services and flexible reward ordering experience.
 
-Tutorial available here: [Building Microservices with Spring Cloud and Docker](http://www.kennybastani.com/2015/07/spring-cloud-docker-microservices.html)
-
-Demonstrated concepts:
-
-* Integration testing using Docker
-* Polyglot persistence
-* Microservice architecture
-* Service discovery
-* API gateway
-
-## Docker
-
-Each service is built and deployed using Docker. End-to-end integration testing can be done on a developer's machine using Docker compose.
-
-## Polyglot Persistence
-
-One of the core concepts of this example project is how polyglot persistence can be approached in practice. Microservices in the project use their own database, while integrating with the data from other services through REST or a message bus.
-
-* Neo4j (graph)
-* MongoDB (document)
-* MySQL (relational)
-
-## Movie Recommendations
-
-This example project focuses on movies and recommendations.
-
-### Data Services
-
-![http://i.imgur.com/NXLHvjR.png](http://i.imgur.com/NXLHvjR.png)
-
-### Domain Data
-
-![http://i.imgur.com/VlwSw2q.png](http://i.imgur.com/VlwSw2q.png)
-
-## Microservice architecture
-
-This example project demonstrates how to build a new application using microservices, as opposed to a monolith-first strategy. Since each microservice in the project is a module of a single parent project, developers have the advantage of being able to run and develop with each microservice running on their local machine. Adding a new microservice is easy, as the discovery microservice will automatically discover new services running on the cluster.
-
-## Service discovery
-
-This project contains two discovery services, one on Netflix Eureka, and the other uses Consul from Hashicorp. Having multiple discovery services provides the opportunity to use one (Consul) as a DNS provider for the cluster, and the other (Eureka) as a proxy-based API gateway.
-
-## API gateway
-
-Each microservice will coordinate with Eureka to retrieve API routes for the entire cluster. Using this strategy each microservice in a cluster can be load balanced and exposed through one API gateway. Each service will automatically discover and route API requests to the service that owns the route. This proxying technique is equally helpful when developing user interfaces, as the full API of the platform is available through its own host as a proxy.
-
-# License
-
-This project is an open source product licensed under GPLv3.
+My responsibilies is to used Spring Boot 2.1 to implement MVC Architecture, developed Spring Cloud Netflix 2.1.5 for Microservices deployment and auto configuration including Zuul for intelligent routing, Feign for declarative REST client, Eureka 1.8 for service discovery, Hystrix 1.5 for circuit breaker, utilized RabbitMQ 3.7 as message broker to enable asynchronous messaging and achieved event-driven communication among microservices, secured microservices using Spring Security 5.0 with OAuth 2.0, involved in front-end development using Bootstrap 4, HTML5, CSS3, JavaScript, Ajax and ReactJS 16.2 to build a front-end prototype, deployed microservices on Amazon EC2 instances for security and scalability, utilized Amazon S3 data buckets to save data centrally, exposed microservices as RESTful web services for internal communication and client access, interacting with MySQL 8.0 database, used Jenkins 2 to build pipelines for automatic building, testing, and deploying, followed Test-Driven Development approach with JUnit 5, Mockito 2 and Postman 5.0, utilized Git 2.10 for version control, Maven as a build tool, and IntelliJ for the application development, used JasperReports 6.5.1 for graphic report generation and track bugs using JIRA 7.0, utilized JBoss server running for the application deployment.
